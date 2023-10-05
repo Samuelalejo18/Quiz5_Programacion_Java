@@ -38,5 +38,4 @@ public class Biblioteca {
     public LinkedList<Libro> mostrarLibrosDisponibles() {
         return librosDisponibles;
     }
-
 }

@@ -82,8 +82,4 @@ public class Libro {
     public void setNumeroPaginas(int numeroPaginas) {
         this.numeroPaginas = numeroPaginas;
     }
-
-
-
-
 }
