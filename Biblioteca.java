@@ -1,15 +1,28 @@
 import java.util.LinkedList;
-
+/**
+ * clase Biblioteca
+ */
 
 public class Biblioteca {
     LinkedList<Libro> librosDisponibles = new LinkedList<>();
-
+    /**
+     * Método que permite registrar un nuevo libro
+     * @param Libro
+     *
+     * Complejidad temporal: O(1) Tiempo constante
+     */
     public void registrarLibro(Libro Libro) {
         librosDisponibles.add(Libro);
 
     }
-
+    /**
+     * Método que permite buscar Libro
+     * @param titulo
+     *
+     * Complejidad temporal: O(n) Tiempo lineal
+     */
     public Libro buscarLibro(String titulo) {
+
         for (Libro Libro : librosDisponibles) {
             if (Libro.getTitulo().equalsIgnoreCase(titulo)) {
                 return Libro; // Se encontró el libro con el título especificado
@@ -18,18 +31,12 @@ public class Biblioteca {
         return null; // No se encontró el libro con el título especificado
     }
 
-    public void mostrarLibros() {
-        if (librosDisponibles.isEmpty()) {
-            System.out.println("No hay libros disponibles en la biblioteca.");
-        } else {
-            System.out.println("Libros disponibles en la biblioteca:");
-            for (Libro libro : librosDisponibles) {
-                System.out.println("Título: " + libro.getTitulo());
-                System.out.println("Autor: " + libro.getAutor());
-                System.out.println("Numero de paginas : " + libro.getNumeroPaginas());
-
-            }
-        }
+    /**
+     * Método que permite registrar un nuevo libro
+     * Complejidad temporal: O(1) Tiempo constante
+     */
+    public LinkedList<Libro> mostrarLibrosDisponibles() {
+        return librosDisponibles;
     }
 
 }
